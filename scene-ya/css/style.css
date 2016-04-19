@@ -1,0 +1,141 @@
+div#detail {
+	display: none;
+    position: absolute;
+    	top:0;
+    	left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.detail_article {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+img.article_img,.code_img {
+    width: 100%;
+}
+
+.dcode{
+	position: relative;
+	width: 40%;
+	left: 5%;
+}
+.dtext{
+	position: absolute;
+	width: 50%;
+	right: 5%;
+	float: right;
+    bottom: 7%;
+	line-height: 25px;
+}
+.back_btn{
+	position: relative;
+	width: 30%;
+	left: 33%;
+	/* bottom: -10px; */
+}
+
+.detail_d1 {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 27%;
+}
+
+img.d1_img {
+    width: 100%;
+}
+
+.detail_d2 {
+    position: absolute;
+    bottom: 1%;
+    width: 90%;
+    left: 5%;
+}
+
+img.d2_img {
+    width: 100%;
+}
+
+.tijiao {
+    text-align: center;
+    margin: 10px 60px;
+    width: 30%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #D93F34;
+    font-size: 20px;
+    border-color: none;
+    color: white;
+    display: inline-block;
+    line-height: 40px;
+    left: 35%;
+    position: absolute;
+}
+
+/*.getInfoMain {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 0 8px;*/
+    /*background: url(res/layer12.jpg) no-repeat;*/
+    /*background-size: contain;*/
+    /*position: relative;*/
+/*}*/
+.main {
+    /* width: 250px; */
+    /* height: 160px; */
+    /* margin-left: -125px; */
+    /* margin-top: -160px; */
+    position: relative;
+    /* left: 50%; */
+    /* top: 95%; */
+    width: 100%;
+    height: 30%;
+    top: 5%;
+    text-align: center;
+}
+.input_name {
+    text-align: center;
+    font-size: 1em;
+    color: #5A5858;
+}
+
+.input_num {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 20px;
+    color: #5A5858;
+}
+.input_bnt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: #D93F34;
+    width: 30%;
+    height: 35px;
+    border-radius: 35px;
+    line-height: 35px;
+    position: absolute;
+    left: 35%;
+}
+
+.map {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 5%;
+}
+
+.map_img{
+    width:100%;
+}
+
+.ban_img {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    /* margin-bottom: 20px; */
+}

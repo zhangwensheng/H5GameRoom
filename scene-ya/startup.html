@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>青春还在，钱和理想都要快</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<script type="text/javascript">
+document.ccConfig = {
+    "debugMode": 1,
+    "frameRate": 60,
+    "id": "gameCanvas",
+    "renderMode": 1,
+    "jsList": []
+};
+</script>
+
+<body style="background-color:#fff">
+    <audio id="audio1">
+        <source src="" type="audio/mp3">
+    </audio>
+    <audio id="audio2">
+        <source src="" type="audio/mp3">
+    </audio>
+    <canvas id="gameCanvas" width="480" height="800"></canvas>
+    <script type="text/javascript" src="js/lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+    var g_resources = [];
+    var res = {
+        layer1: "res/layer1.jpg",
+        beginBtn: "res/beginBtn.png",
+        huo1: "res/huo1.png",
+        huo2: "res/huo2.png",
+        huo3: "res/huo3.png",
+        huo4: "res/huo4.png",
+
+        layer2: "res/layer2.jpg",
+        yan1: "res/yan1.png",
+        yan2: "res/yan2.png",
+        yan3: "res/yan3.png",
+        yan4: "res/yan4.png",
+        yan5: "res/yan5.png",
+        yan6: "res/yan6.png",
+
+        layer3: "res/layer3.jpg",
+        p1: "res/p1.png",
+        p2: "res/p2.png",
+
+        layer4: "res/layer4.jpg",
+        tShirt1: "res/tShirt1.png",
+        tShirt2: "res/tShirt2.png",
+        tShirt3: "res/tShirt3.png",
+        tShirt4: "res/tShirt4.png",
+        tShirt5: "res/tShirt5.png",
+
+        layer5: "res/layer5.jpg",
+        bike: "res/bike.png",
+        l: "res/l.png",
+        r: "res/r.png",
+
+        layer6: "res/layer6.jpg",
+        shine: "res/shine.png",
+        ll: "res/ll.png",
+        rr: "res/rr.png",
+
+        layer7: "res/layer7.jpg",
+        erhuan: "res/erhuan.png",
+
+        layer8: "res/layer8.jpg",
+        down: "res/down.png",
+        up: "res/up.png",
+        floor: "res/floor.png",
+        taijie: "res/taijie.png",
+        cs: "res/cs.png",
+
+        layer9: "res/layer9.jpg",
+        // zhiwei1: "res/zhiwei/1.png",
+        // zhiwei2: "res/zhiwei/2.png",
+        // zhiwei3: "res/zhiwei/3.png",
+        // zhiwei4: "res/zhiwei/4.png",
+        // zhiwei5: "res/zhiwei/5.png",
+        // zhiwei6: "res/zhiwei/6.png",
+        // zhiwei7: "res/zhiwei/7.png",
+
+        zhiwei11: "res/zhiwei/11.png",
+        zhiwei22: "res/zhiwei/22.png",
+        zhiwei33: "res/zhiwei/33.png",
+        zhiwei44: "res/zhiwei/44.png",
+        zhiwei55: "res/zhiwei/55.png",
+        zhiwei66: "res/zhiwei/66.png",
+        zhiwei77: "res/zhiwei/77.png",
+
+        layer10: "res/layer10.jpg",
+        goBack: "res/goBack.png",
+        go: "res/go.png",
+
+        describle1: "res/describle/1.png",
+        describle2: "res/describle/2.png",
+        describle3: "res/describle/3.png",
+        describle4: "res/describle/4.png",
+        describle5: "res/describle/5.png",
+        describle6: "res/describle/6.png",
+        describle7: "res/describle/7.png",
+
+        zi2: "res/zi/2.png",
+        zi3: "res/zi/3.png",
+        zi4: "res/zi/4.png",
+        zi5: "res/zi/5.png",
+        zi6: "res/zi/6.png",
+        zi7: "res/zi/7.png",
+
+        l3:"res/zi/l3.png",
+        l6:"res/zi/l6.png",
+
+        back: "res/back.png",
+
+        move: "res/move.png",
+
+        jiu1:"res/jiu/jiu01.png",
+        jiu2:"res/jiu/jiu02.png",
+        jiu3:"res/jiu/jiu03.png",
+        jiu4:"res/jiu/jiu04.png",
+//        jiu5:"res/jiu/jiu05.png",
+//        jiu6:"res/jiu/jiu06.png",
+//        jiu7:"res/jiu/jiu07.png",
+//        jiu8:"res/jiu/jiu08.png",
+//        jiu9:"res/jiu/jiu09.png",
+//        jiu10:"res/jiu/jiu10.png",
+
+        loadingpage: "res/loadingpage.jpg"
+    };
+    for (var i in res) {
+        g_resources.push(res[i]);
+    }
+
+
+    window.onload = function() {
+        resourceCallBack();
+    }
+
+    var au1 = document.getElementById('audio1');
+    au1.src = './res/music/bg.mp3';
+    au1.play();
+    au1.loop = true;
+
+    var au2 = document.getElementById('audio2');
+    au2.src = './res/music/1.mp3';
+    au2.play();
+    </script>
+    <script type="text/javascript" src="js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/gameScene.js?222" charset="UTF-8"></script>
+    <style type="text/css">
+    .getInfo {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        overflow: hidden;
+        z-index: 1000;
+        background-color: white;
+        display: none;
+    }
+    
+    .getInfoMain {
+        width: 100%;
+        height: 100%;
+        margin: 0 8px;
+        /*background: url(res/layer12.jpg) no-repeat;*/
+        background-size: contain;
+        position: relative;
+        background-color: white;
+    }
+    
+    /*.main {*/
+        /*width: 250px;*/
+        /*height: 160px;*/
+        /*margin-left: -125px;*/
+        /*margin-top: -160px;*/
+        /*position: absolute;*/
+        /*left: 50%;*/
+        /*top: 95%;*/
+    /*}*/
+    
+    form {
+        margin: 20px auto;
+    }
+    
+    table {
+        font-size: 18px;
+    }
+    input {
+        width: 55%;
+        height: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba(50, 50, 50, 0.62);
+    }
+    /*input {*/
+        /*width: 150px;*/
+        /*height: 30px;*/
+        /*border-radius: 30px;*/
+    /*}*/
+    </style>
+    <div class="getInfo" id="getInfo">
+        <div class="getInfoMain">
+            <div class="map">
+            <img class="map_img" src="res/map12.png">
+            </div>
+                <div class="main">
+                    <div class="input_name">
+                        <span>您的姓名：</span>
+                        <input type="text">
+                    </div>
+                    <div class="input_num">
+                        <span>您的电话：</span>
+                        <input type="text">
+                    </div>
+                    <div class="input_bnt" onclick="send()">提  交</div>
+                    <!-- <img src="res/goBack.png"> -->
+                </div>
+       <!--<div id="input_all">-->
+                    <!--<div class="tijiao" type="button" value="提   交" style="" onclick="send()">提交</div>-->
+                <!--</div>-->
+        </div>
+    </div>
+    <div class="detail" id="detail">
+        <div class="detail_article">
+            <img src="res/detail/21back.png" class="article_img">
+            <div id="d1" class="detail_d1"><img id="d1_img" class="d1_img" src="res/detail/11.jpg"></div>
+            <div id="d2" class="detail_d2"><img id="d2_img" class="d2_img" src="res/detail/21.jpg"></div>
+        </div>
+        <div class="detail_2d">
+            <div class="dcode">
+                <img src="res/detail/2DCode.png" class="code_img">
+            </div>
+            <div class="dtext"><span class="2dtext_span">长按图中二维码<br/>并关注凤凰传说公众号</span></div>
+        </div>
+        <div class="ban_img"><img src="res/detail/back_btn.png" class="back_btn" onclick="detailBack()"></div>
+    </div>
+    <script type="text/javascript">
+    function send() {
+        var name = document.getElementById('name');
+        var phone = document.getElementById('phone');
+        alert(name.value, phone.value)
+    };
+
+    function gobackYP() {
+        var hidDIV = document.getElementById('getInfo');
+        hidDIV.style.display = 'none';
+    }
+    </script>
+    <script src="detail.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
