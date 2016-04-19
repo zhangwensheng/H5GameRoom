@@ -1,0 +1,22 @@
+{
+	"name": "egret",
+	"version": "2.5.0",
+	"modules": [
+		{
+			"name": "socket.io",
+			"description": "socket.io",
+			"files": [
+			  "socket.io.js",
+				"socket.io.d.ts"
+			],
+			"root":"src",
+			"name": "weixinapi",
+			"description": "weixinapi",
+			"files": [
+				"jweixin-1.0.0.js",
+				"weixinapi.d.ts"
+			],
+			"root": "weixinapi"
+		}
+	]
+}
